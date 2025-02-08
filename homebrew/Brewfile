@@ -1,0 +1,67 @@
+# To use
+# - copy the below into a file named "~/.Brewfile"
+# - run `brew bundle --file=~/.Brewfile` in the directory with this file
+
+# To amend
+# - `tap` is the equivalent of `brew tap`
+# - `brew` is the equivalent of `brew install`
+# - `cask` is the equivalent of `brew install --cask`
+
+# Refs:
+# - https://github.com/Homebrew/homebrew-bundle
+# -----------------------------------------------------------------------------
+
+# Utils
+## Git
+brew "git"
+brew "gh"
+
+## JSON Parser
+brew "jq"
+
+# -----------------------------------------------------------------------------
+
+# Infrastructure
+## AWS CLI
+brew "awscli"
+
+## Terraform
+tap "hashicorp/tap"
+tap "hashicorp/tap/terraform"
+brew "tfenv"
+brew "tflint"
+
+# -----------------------------------------------------------------------------
+
+# Language Utilities
+## Python
+brew "pipx"
+brew "pyenv"
+
+## JavaScript
+brew "eslint"
+
+# Applications
+## Development
+cask "visual-studio-code"
+cask "bruno"
+
+## QoL
+cask "rectangle"
+
+# -----------------------------------------------------------------------------
+
+# VSCode Extensions
+## Utils
+vscode "eamodio.gitlens"
+vscode "mhutchie.git-graph"
+vscode "aaron-bond.better-comments"
+vscode "mechatroner.rainbo-csv"
+vscode "bierner.markdown-mermaid"
+vscode "ms-python.python"
+vscode "dbaeumer.vscode-eslint"
+
+## Infrastructure
+vscode "amazonwebservices.aws-toolkit-vscode"
+vscode "hashicorp.terraform"
+vscode "ms-azure-tools.vscode-docker"
